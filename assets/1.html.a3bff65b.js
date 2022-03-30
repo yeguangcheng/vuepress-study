@@ -1,0 +1,1 @@
+const t={key:"v-23cfdddc",path:"/subject/ts/1.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"1\u3001interface\u548Ctype\u7684\u533A\u522B",slug:"_1\u3001interface\u548Ctype\u7684\u533A\u522B",children:[]}],git:{},filePathRelative:"subject/ts/1.md"};export{t as data};

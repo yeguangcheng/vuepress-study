@@ -1,0 +1,1 @@
+import{o as e,a as r}from"./app.4b00b54f.js";import{_ as o}from"./plugin-vue_export-helper.21dcd24c.js";const t={};function c(n,a){return e(),r("p",null,"mobile")}var m=o(t,[["render",c]]);export{m as default};
