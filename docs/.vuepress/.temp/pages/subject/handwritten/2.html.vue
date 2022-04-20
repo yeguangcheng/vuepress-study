@@ -1,0 +1,10 @@
+<template><h3 id="_2、计算多个区间的交集" tabindex="-1"><a class="header-anchor" href="#_2、计算多个区间的交集" aria-hidden="true">#</a> 2、计算多个区间的交集</h3>
+<ul>
+<li>区间用长度为2的数字数组表示，如[2, 5]表示区间2到5（包括2和5）；</li>
+<li>区间不限定方向，如[5, 2]等同于[2, 5]；</li>
+<li>实现<code>getIntersection</code>函数可接收多个区间，并返回所有区间的交集（用区间表示），如空集用null表示<br>
+<strong>示例</strong>：</li>
+</ul>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token function">getIntersection</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [4, 5]  </span>
+<span class="token function">getIntersection</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// null</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div></template>

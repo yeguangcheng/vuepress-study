@@ -1,1 +1,0 @@
-const t={key:"v-d190c938",path:"/subject/algorithm/1.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"1\u3001\u6700\u957F\u516C\u5171\u524D\u7F00",slug:"_1\u3001\u6700\u957F\u516C\u5171\u524D\u7F00",children:[]}],git:{},filePathRelative:"subject/algorithm/1.md"};export{t as data};

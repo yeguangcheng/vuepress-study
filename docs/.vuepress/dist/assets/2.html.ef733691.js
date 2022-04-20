@@ -1,0 +1,1 @@
+const e={key:"v-4eeb84ef",path:"/subject/css/2.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"2\u3001flex: 0 1 auto \u8868\u793A\u4EC0\u4E48\u610F\u601D",slug:"_2\u3001flex-0-1-auto-\u8868\u793A\u4EC0\u4E48\u610F\u601D",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"subject/css/2.md"};export{e as data};

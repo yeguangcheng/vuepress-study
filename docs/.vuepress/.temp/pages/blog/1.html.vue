@@ -1,0 +1,187 @@
+<template><h3 id="_1、静态资源优化策略" tabindex="-1"><a class="header-anchor" href="#_1、静态资源优化策略" aria-hidden="true">#</a> 1、静态资源优化策略</h3>
+<p><strong>常见图片格式：jpg、png、gif、webp</strong></p>
+<p>jpg 是有损压缩方法，不支持透明色，色彩丰富，常用于banner<br>
+png 是无损压缩，支持透明度，可还原度、可再编辑特性强，常用于icon</p>
+<p><strong>用工具进行图片压缩</strong></p>
+<p>压缩png，可使用<code>node-pngquant-native</code>，跨平台，压缩比高<br>
+压缩jpg，可使用<code>jpegtran</code>，跨平台<br>
+压缩gif，可使用<code>gifsicle</code>，通过改变每帧比例减少文件大小，公认的解决方案</p>
+<p><strong>图片尺寸跟随网络环境变化</strong></p>
+<p><strong>响应式图片</strong></p>
+<ul>
+<li>js绑定事件检测窗口大小</li>
+<li>css 媒体查询</li>
+<li>img 标签属性</li>
+</ul>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token comment">&lt;!-- srcset表示屏幕宽度320px时加载img1.jpg、640px时加载img2.jpg、960px时加载img3.jpg --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img1.jpg 320w,img2.jpg 640w,img3.jpg 960w<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img3.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- size表示屏幕宽度320px时图片宽度为300px，其他情况为640px --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img3.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>(max-width: 320px) 300w, 640w<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>逐步加载图像</strong></p>
+<p>在图片加载前先使用占位符显示，图片再逐步进行加载，加快页面渲染速度。</p>
+<ul>
+<li>使用统一占位符，可在项目中使用统一的图片占位</li>
+<li>使用lqip（低质量图像占位符），可以把图片转换成低质量、文件小的图像进行占位，<code>npm i lqip</code></li>
+<li>使用sqip（基于SVG的图像占位符）），可以把图片转换成低质量、文件小的图像进行占位，<code>npm i sqip</code></li>
+</ul>
+<p><strong>替代图片</strong></p>
+<ul>
+<li>字体代替图片</li>
+<li>data url 代替图片(base64)</li>
+<li>image spriting （雪碧图）</li>
+</ul>
+<p><strong>图片服务器自动优化</strong><br>
+图片服务器自动优化是可以在图片URL链接上增加不同的参数使服务器自动化生成不同格式、大小、质量的图片。<br>
+处理方式有图片裁剪、图片格式转换、图片编辑（水印、模糊、压缩）、AI智能合成等</p>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token comment">&lt;!-- 默认 500x500 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com/static/img/500x500/164331/984e5fwhjt3ka3bny.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 300x300 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com/static/img/300x300/164331/984e5fwhjt3ka3bny.jpg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- webp --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com/static/img/500x500/164331/984e5fwhjt3ka3bny.webp<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 质量压缩到10% --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com/static/img/500x500/164331/984e5fwhjt3ka3bny.jpg!q10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p><strong>精简HTML代码</strong></p>
+<ul>
+<li>减少HTML的嵌套</li>
+<li>减少DOM节点数量</li>
+<li>减少无意义的节点</li>
+<li>删除URL当中的协议头http/https（协议头和当前页面一致或多协议通用时）</li>
+<li>删除多余的空格、换行符、缩进和不必要的注释</li>
+<li>省略冗余标签和属性</li>
+<li>使用相对路径的URL</li>
+</ul>
+<p><strong>文件放在合适位置</strong></p>
+<ul>
+<li>CSS文件链接尽量放在页面头部，CSS加载会阻塞DOM Tree渲染，在body元素前应确保已解析所有CSS样式，减少浏览此重排</li>
+<li>JS引用放在HTML底部，防止JS的加载、解析、执行对阻塞页面后续元素的正常渲染</li>
+</ul>
+<p><strong>增强用户体验</strong></p>
+<ul>
+<li>设置favicon.icon</li>
+<li>增加首屏必要的CSS和JS，当页面在加载资源白屏过程中增加背景图片或者loding标识，使首屏快速展示，减少等待过程</li>
+</ul>
+<p><strong>提升CSS渲染性能</strong></p>
+<ul>
+<li>谨慎使用expensive属性，如：nth-child、position:fixed</li>
+<li>尽量减少样式层级数，如 div ul li span { color: #333 }</li>
+<li>尽量避免使用占用过多CPU和内存的属性，如text-indent: -99999px</li>
+<li>尽量避免使用耗电量大的属性，如transforms、transition、opacity</li>
+</ul>
+<p><strong>合理使用CSS选择器</strong></p>
+<ul>
+<li>尽量避免使用CSS表达式，如 background-color:expression(new Date().getHours()%2 ? '#fff' : '#000');</li>
+<li>尽量避免使用通配符选择器，body a {font-weight: bold}</li>
+<li>尽量避免类正则的属性选择器 *=、|=、^=、$=</li>
+</ul>
+<p><strong>提升CSS文件加载性能</strong></p>
+<ul>
+<li>使用外链CSS，减少页面体积，同时也可以使用CDN加速</li>
+<li>尽量避免使用@import</li>
+</ul>
+<p><strong>精简CSS代码</strong></p>
+<ul>
+<li>使用缩写语句，如 margin: 20px 0 0 20px;</li>
+<li>删除不必要的0，如 transition: all .2s</li>
+<li>删除不必要的单位，如 margin: 0 auto</li>
+<li>删除过多的分号</li>
+<li>删除空格和注释</li>
+<li>尽量减少样式表的大小</li>
+</ul>
+<p><strong>合理使用web fonts</strong></p>
+<ul>
+<li>将字体部署在CDN上</li>
+<li>将字体以base64形式保存至CSS中并通过localStorage进行缓存</li>
+<li>Google字体库因为网络原因，尽量使用国内托管服务</li>
+</ul>
+<p><strong>CSS动画优化</strong></p>
+<ul>
+<li>尽量避免同时动画</li>
+<li>延迟动画初始化</li>
+<li>结合SVG</li>
+</ul>
+<p><strong>JS优化总体原则</strong></p>
+<ul>
+<li>当需要时才优化，不必要时刻关注优化问题</li>
+<li>考虑可维护性，确保优化后的代码容易维护</li>
+</ul>
+<p><strong>提升JS文件加载性能</strong></p>
+<ul>
+<li>加载元素的顺序，CSS文件放在 head 里，JS文件放在 body 里，达到优先渲染html和css页面快速打开的效果</li>
+</ul>
+<p><strong>JS变量和函数优化</strong></p>
+<ul>
+<li>尽量使用id选择器，它的性能最好</li>
+<li>尽量避免使用eval，eval性能比较低</li>
+<li>JS函数尽可能保持简洁，按功能划分模块，保持简洁易维护</li>
+<li>使用事件节流函数</li>
+<li>使用事件委托，绑定到父级元素</li>
+</ul>
+<p><strong>JS动画优化</strong></p>
+<ul>
+<li>避免添加大量JS动画</li>
+<li>尽量使用CSS3动画</li>
+<li>尽量使用Canvas动画</li>
+<li>合理使用 requestAnimationFrame 动画代替 setTimeout、setInterval，因为 requestAnimationFrame 可以在正确的时间进行渲染</li>
+</ul>
+<p><strong>合理使用缓存</strong></p>
+<ul>
+<li>缓存DOM对象，减少浏览器开销</li>
+<li>缓存列表长度</li>
+<li>使用可缓存的Ajax</li>
+</ul>
+<p><strong>JS模块化加载方案和选型</strong></p>
+<ul>
+<li>CommonJS</li>
+<li>AMD</li>
+<li>CMD</li>
+<li>ES6 import<br>
+详细可查看<a href="/subject/js/2" target="_blank" rel="noopener noreferrer">《介绍模块化发展历程》<ExternalLinkIcon/></a></li>
+</ul>
+<p><strong>减少浏览器的回流和重绘</strong><br>
+详细可查看<a href="/blog/2" target="_blank" rel="noopener noreferrer">《带你了解浏览器的回流和重绘》<ExternalLinkIcon/></a></p>
+<p><strong>简化DOM操作</strong></p>
+<ul>
+<li>对DOM节点的操作统一处理后，再统一插入到DOM Tree中</li>
+<li>可以使用 fragment，尽量不在页面DOM Tree里直接操作</li>
+<li>现在的流行框架 Angular、React、Vue 都在使用虚拟DOM技术，通过diff算法简化和减少DOM操作</li>
+</ul>
+<p><strong>静态文件打包处理</strong></p>
+<ul>
+<li>公共组件拆分，提高代码复用率</li>
+<li>JS/CSS文件进行压缩处理</li>
+<li>JS/CSS文件进行合并，CSS Sprite</li>
+<li>Combo: 服务端处理合并JS/CSS文件，如 http://cdn.com/??a.js,b.js</li>
+</ul>
+<p><strong>图片懒加载</strong>
+把页面上需要懒加载的元素src设置为空字符，把真实的src属性写在data-lazy属性中，当页面滚动的时候监听scroll事件，如果懒加载元素在可视区域内，就把图片的src属性值进行替换</p>
+<p><strong>预加载</strong>
+让浏览器来预先加载某些可能会使用到的资源（图片、JS/CSS）到本地，在后面需要使用时就可以直接从浏览器缓存中取，减少后续加载资源等待时间<br>
+可使用preload，prefetch，preconnect</p>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preload<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>src/style.css<span class="token punctuation">"</span></span> <span class="token attr-name">as</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>style<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prefetch<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>src/img.png<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>preconnect<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com<span class="token punctuation">"</span></span> <span class="token attr-name">crossorigin</span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>预渲染</strong>
+在页面中渲染组件，但是并不在页面中展示，渲染好后先隐藏起来，用的时候再直接展示</p>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>prerender<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://test.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br></div></div><p><strong>接口缓存策略优化</strong></p>
+<ul>
+<li>Ajax/fetch缓存，请求时带上cache，依赖浏览器本身缓存机制</li>
+<li>本地缓存，使用localStorage中的缓存数据</li>
+</ul>
+<p><strong>开启gzip压缩</strong>
+压缩文本效率达到50%-70&amp;，开启方法：</p>
+<ul>
+<li>Nginx 配置： nginx.conf文件增加 gzip on</li>
+<li>Apache 配置：  AddOutputFilterByType和AddOutputFilter<br>
+生效后可在Response header里是否有 Content-Encoding: gzip</li>
+</ul>
+<p><strong>书籍推荐</strong></p>
+<ul>
+<li>《web性能权威指南》</li>
+<li>《网站性能监测与优化》</li>
+<li>《高性能网站建设指南》</li>
+</ul>
+</template>

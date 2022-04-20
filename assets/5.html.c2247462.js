@@ -1,1 +1,0 @@
-const t={key:"v-5ff6ea4e",path:"/subject/js/5.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"5\u3001\u6570\u7EC4\u7684\u6241\u5E73\u5316\u5904\u7406\u65B9\u6CD5(flat)",slug:"_5\u3001\u6570\u7EC4\u7684\u6241\u5E73\u5316\u5904\u7406\u65B9\u6CD5-flat",children:[]}],git:{},filePathRelative:"subject/js/5.md"};export{t as data};

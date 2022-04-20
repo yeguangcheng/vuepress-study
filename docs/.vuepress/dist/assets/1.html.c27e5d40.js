@@ -1,0 +1,1 @@
+const t={key:"v-02901a80",path:"/subject/computer/1.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:3,title:"http\u72B6\u6001\u7801\u6709\u54EA\u4E9B\uFF1F",slug:"http\u72B6\u6001\u7801\u6709\u54EA\u4E9B",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"subject/computer/1.md"};export{t as data};
