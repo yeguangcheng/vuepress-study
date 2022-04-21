@@ -1,57 +1,20 @@
 name: docs
-
 on:
-    # 每当 push 到 master 分支时触发部署
-    push:
-        branches: [master]
-    # 手动触发部署
-    workflow_dispatch:
-
+  push:
+    branches:
+      - master
 jobs:
-    docs:
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v1
 
-        steps:
-            - uses: actions/checkout@v2
-              with:
-                  # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-                  fetch-depth: 0
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v1
-              with:
-                  # 选择要使用的 node 版本号
-                  node-version: '14'
-
-            # 缓存 node_modules
-            - name: Cache dependencies
-              uses: actions/cache@v2
-              id: yarn-cache
-              with:
-                  path: |
-                      **/node_modules
-                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-yarn-
-
-            # 如果缓存没有命中，安装依赖
-            - name: Install dependencies
-              if: steps.yarn-cache.outputs.cache-hit != 'true'
-              run: yarn --frozen-lockfile
-
-            # 运行构建脚本
-            - name: Build VuePress site
-              run: yarn build
-
-            # 查看 workflow 的文档来获取更多信息
-            # @see https://github.com/crazy-max/ghaction-github-pages
-            - name: Deploy to GitHub Pages
-              uses: crazy-max/ghaction-github-pages@v2
-              with:
-                  # 部署到 gh-pages 分支
-                  target_branch: gh-pages
-                  # 部署目录为 VuePress 的默认输出目录
-                  build_dir: docs/.vuepress/dist
-              env:
-                  # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-                  GITHUB_TOKEN: ${{ secrets.VUEPRESSTOKEN }}
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v2
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} ## GitHub 密钥 ACCESS_TOKEN 是在第二步Settings的Secrets中新增时定义的Name,要保持一致
+          BASE_BRANCH: master # The branch the action should deploy from.
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/.vuepress/dist # The folder the action should deploy.
+          BUILD_SCRIPT: yarn build # The build script the action should run prior to deploying.
