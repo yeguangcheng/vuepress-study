@@ -141,6 +141,14 @@ module.exports = {
                         {
                             text: '7、介绍BFC及其应用？',
                             link: '/subject/css/7'
+                        },
+                        {
+                            text: '8、如何让一个 div 水平垂直居中？',
+                            link: '/subject/css/8'
+                        },
+                        {
+                            text: '9、分析比较 opacity: 0、visibility: hidden、display: none',
+                            link: '/subject/css/9'
                         }
                     ]
                 },

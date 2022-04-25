@@ -8,20 +8,26 @@ export const data = {
   "headers": [
     {
       "level": 3,
-      "title": "7.介绍BFC及其应用？",
-      "slug": "_7-介绍bfc及其应用",
+      "title": "7.介绍 BFC 及其应用？",
+      "slug": "_7-介绍-bfc-及其应用",
       "children": []
     },
     {
       "level": 3,
-      "title": "BFC介绍",
-      "slug": "bfc介绍",
+      "title": "BFC 介绍",
+      "slug": "bfc-介绍",
       "children": []
     }
   ],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1650470511000,
+    "contributors": [
+      {
+        "name": "guangcheng.ye",
+        "email": "279505875@qq.com",
+        "commits": 2
+      }
+    ]
   },
   "filePathRelative": "subject/css/7.md"
 }

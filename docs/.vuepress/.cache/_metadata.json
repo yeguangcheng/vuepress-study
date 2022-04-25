@@ -1,35 +1,35 @@
 {
-  "hash": "f5b4fbb1",
-  "browserHash": "08512ea6",
+  "hash": "ab4e2958",
+  "browserHash": "0c8578e1",
   "optimized": {
     "vue": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/vue.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/vue.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
       "needsInterop": false
     },
     "vue-router": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/vue-router.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/vue-router.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "needsInterop": false
     },
     "@vue/devtools-api": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/@vue_devtools-api.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/@vue_devtools-api.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/@vue/devtools-api/lib/esm/index.js",
       "needsInterop": false
     },
     "@vueuse/core": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/@vueuse_core.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/@vueuse/core/index.mjs",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/@vueuse/core/index.mjs",
       "needsInterop": false
     },
     "nprogress": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/nprogress.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/nprogress/nprogress.js",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/nprogress.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/nprogress/nprogress.js",
       "needsInterop": true
     },
     "@vuepress/shared": {
-      "file": "E:/项目/vuepress-study-github/docs/.vuepress/.cache/@vuepress_shared.js",
-      "src": "E:/项目/vuepress-study-github/node_modules/@vuepress/shared/lib/esm/index.js",
+      "file": "E:/项目/vuepress-study-prod/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "E:/项目/vuepress-study-prod/node_modules/@vuepress/shared/lib/esm/index.js",
       "needsInterop": false
     }
   }

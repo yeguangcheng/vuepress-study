@@ -200,18 +200,46 @@ export const searchIndex = [
     "headers": [
       {
         "level": 3,
-        "title": "7.介绍BFC及其应用？",
-        "slug": "_7-介绍bfc及其应用",
+        "title": "7.介绍 BFC 及其应用？",
+        "slug": "_7-介绍-bfc-及其应用",
         "children": []
       },
       {
         "level": 3,
-        "title": "BFC介绍",
-        "slug": "bfc介绍",
+        "title": "BFC 介绍",
+        "slug": "bfc-介绍",
         "children": []
       }
     ],
     "path": "/subject/css/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "8.如何让一个 div 水平垂直居中？",
+        "slug": "_8-如何让一个-div-水平垂直居中",
+        "children": []
+      }
+    ],
+    "path": "/subject/css/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 3,
+        "title": "9、分析比较 opacity: 0、visibility: hidden、display: none",
+        "slug": "_9、分析比较-opacity-0、visibility-hidden、display-none",
+        "children": []
+      }
+    ],
+    "path": "/subject/css/9.html",
     "pathLocale": "/",
     "extraFields": []
   },

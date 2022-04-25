@@ -18,6 +18,8 @@ const routeItems = [
   ["v-540a0ecc","/subject/css/5.html",{"title":""},["/subject/css/5","/subject/css/5.md"]],
   ["v-55bee76b","/subject/css/6.html",{"title":""},["/subject/css/6","/subject/css/6.md"]],
   ["v-5773c00a","/subject/css/7.html",{"title":""},["/subject/css/7","/subject/css/7.md"]],
+  ["v-592898a9","/subject/css/8.html",{"title":""},["/subject/css/8","/subject/css/8.md"]],
+  ["v-5add7148","/subject/css/9.html",{"title":""},["/subject/css/9","/subject/css/9.md"]],
   ["v-4d65762a","/subject/handwritten/1.html",{"title":""},["/subject/handwritten/1","/subject/handwritten/1.md"]],
   ["v-49fbc4ec","/subject/handwritten/2.html",{"title":""},["/subject/handwritten/2","/subject/handwritten/2.md"]],
   ["v-469213ae","/subject/handwritten/3.html",{"title":""},["/subject/handwritten/3","/subject/handwritten/3.md"]],

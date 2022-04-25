@@ -7,8 +7,14 @@ export const data = {
   "excerpt": "",
   "headers": [],
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1650468506000,
+    "contributors": [
+      {
+        "name": "guangcheng.ye",
+        "email": "279505875@qq.com",
+        "commits": 1
+      }
+    ]
   },
   "filePathRelative": "subject/html/README.md"
 }
