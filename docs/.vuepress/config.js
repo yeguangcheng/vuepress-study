@@ -21,8 +21,8 @@ module.exports = {
     ],
     // 站点配置
     lang: 'zh-CN',
-    title: '前端成神之路',
-    description: '前端成神之路',
+    title: '高级前端进修之路',
+    description: '高级前端进修之路',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         // 增加一个自定义的 favicon(网页标签的图标)
