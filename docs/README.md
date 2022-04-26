@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /img/home-logo.jpeg
-heroText: 前端成神之路
+heroText: 前端进修之路
 tagline: 一个前端刷题和学习的知识博客
 actions: 
 - text: 快速刷题 →
