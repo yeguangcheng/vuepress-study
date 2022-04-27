@@ -131,7 +131,7 @@ module.exports = {
                             link: '/subject/css/4'
                         },
                         {
-                            text: '5、如何实现浏览器内多个标签页之间的通信',
+                            text: '5、简述 Rem 及其转换原理',
                             link: '/subject/css/5'
                         },
                         {
@@ -169,6 +169,16 @@ module.exports = {
                         {
                             text: '1、组件传递数据有几种方式',
                             link: '/subject/vue/1'
+                        }
+                    ]
+                },
+                {
+                    text: '浏览器',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: '1、如何实现浏览器内多个标签页之间的通信？',
+                            link: '/subject/browser/1'
                         }
                     ]
                 },
