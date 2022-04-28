@@ -39,6 +39,8 @@ module.exports = {
         '@theme/Page.vue': path.resolve(__dirname, './components/Page.vue')
     },
     home: true,
+    // 端口配置
+    port: 8081,
     // 主题和它的配置
     theme: '@vuepress/theme-default',
     themeConfig: {
@@ -81,6 +83,22 @@ module.exports = {
                         {
                             text: '6、异步加载JS的方式有哪些？会阻塞什么？',
                             link: '/subject/js/6'
+                        },
+                        {
+                            text: '7、什么是防抖和节流？有什么区别？如何实现？',
+                            link: '/subject/js/7'
+                        },
+                        {
+                            text: '8、setTimeout、Promise、Async/Await 的区别',
+                            link: '/subject/js/8'
+                        },
+                        {
+                            text: '9、简单说说 js 中有哪几种内存泄露的情况',
+                            link: '/subject/js/9'
+                        },
+                        {
+                            text: '10、Async/Await 是如何通过同步的方式实现异步？',
+                            link: '/subject/js/10'
                         }
                     ]
                 },
@@ -169,6 +187,18 @@ module.exports = {
                         {
                             text: '1、组件传递数据有几种方式',
                             link: '/subject/vue/1'
+                        },
+                        {
+                            text: '2、为什么在 Vue3.0 采用了 Proxy，抛弃了 Object.defineProperty？',
+                            link: '/subject/vue/2'
+                        },
+                        {
+                            text: '3、Vue 的父组件和子组件生命周期钩子执行顺序是什么？',
+                            link: '/subject/vue/3'
+                        },
+                        {
+                            text: '4、双向绑定和 vuex 是否冲突？',
+                            link: '/subject/vue/4'
                         }
                     ]
                 },
