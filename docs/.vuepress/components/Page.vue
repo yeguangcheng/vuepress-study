@@ -22,11 +22,23 @@ import PageNav from '@theme/PageNav.vue'
         margin: 0 auto;
         .language-html,
         .language-typescript,
+        .language-css,
         .language-javascript {
             code {
                 background-color: #282c34;
                 padding: 0;
             }
+        }
+        .language-text {
+            code {
+                background-color: #282c34;
+                color: #fff;
+                padding: 0;
+            }
+        }
+        code {
+            background-color: #fff5f5;
+            color: #ff502c;
         }
         h2 {
             border-bottom: none;

@@ -48,7 +48,7 @@ module.exports = {
         navbar: [
             // 导航栏配置
             { text: 'Home', link: '/' },
-            // { text: '技术文章', link: '/blog' },
+            { text: '技术文章', link: '/blog' },
             { text: '面试题汇总', link: '/subject/js/1' }
         ],
         // 侧边栏配置
@@ -167,6 +167,10 @@ module.exports = {
                         {
                             text: '9、分析比较 opacity: 0、visibility: hidden、display: none',
                             link: '/subject/css/9'
+                        },
+                        {
+                            text: '10、说一下position:sticky',
+                            link: '/subject/css/10'
                         }
                     ]
                 },
