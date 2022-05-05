@@ -99,6 +99,10 @@ module.exports = {
                         {
                             text: '10、Async/Await 是如何通过同步的方式实现异步？',
                             link: '/subject/js/10'
+                        },
+                        {
+                            text: '11、介绍下 Set、Map、WeakSet 和 WeakMap 的区别？',
+                            link: '/subject/js/11'
                         }
                     ]
                 },
@@ -203,6 +207,10 @@ module.exports = {
                         {
                             text: '4、双向绑定和 vuex 是否冲突？',
                             link: '/subject/vue/4'
+                        },
+                        {
+                            text: '5、Vue 中 computed 和 watch 的区别',
+                            link: '/subject/vue/5'
                         }
                     ]
                 },

@@ -21,6 +21,7 @@
 | TypeScript | [interface 和 type 的区别](https://yeguangcheng.github.io/vuepress-study/subject/ts/1.html)                                  | 更新中 :rocket: |
 | Vue        | [组件传递数据有几种方式？](https://yeguangcheng.github.io/vuepress-study/subject/vue/1.html)                                 | 更新中 :rocket: |
 | 编程题     | [计算页面中的节点数量、最大嵌套深度、最大子节点数](https://yeguangcheng.github.io/vuepress-study/subject/handwritten/1.html) | 更新中 :rocket: |
+| 浏览器     | [如何实现浏览器内多个标签页之间的通信？](https://yeguangcheng.github.io/vuepress-study/subject/browser/1.html)               | 更新中 :rocket: |
 | 计算机     | [http 状态码有哪些？](https://yeguangcheng.github.io/vuepress-study/subject/computer/1.html)                                 | 更新中 :rocket: |
 | 算法       | [最长公共前缀](https://yeguangcheng.github.io/vuepress-study/subject/algorithm/1.html)                                       | 更新中 :rocket: |
 | 性能优化   | [获取白屏和首屏加载时间](https://yeguangcheng.github.io/vuepress-study/subject/performance/1.html)                           | 更新中 :rocket: |
