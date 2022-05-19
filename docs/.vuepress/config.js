@@ -225,6 +225,16 @@ module.exports = {
                     ]
                 },
                 {
+                    text: '前端工具',
+                    collapsible: true,
+                    children: [
+                        {
+                            text: '1、webpack 中 loader 和 plugin 的区别是什么',
+                            link: '/subject/tools/1'
+                        }
+                    ]
+                },
+                {
                     text: '编程题',
                     collapsible: true,
                     children: [
@@ -267,8 +277,16 @@ module.exports = {
                             link: '/subject/computer/2'
                         },
                         {
-                            text: '什么是 AST？有什么应用场景？',
+                            text: '3、什么是 AST？有什么应用场景？',
                             link: '/subject/computer/3'
+                        },
+                        {
+                            text: '4、简单讲解一下 http2 的多路复用',
+                            link: '/subject/computer/4'
+                        },
+                        {
+                            text: '5、简述 HTTP2.0 与 HTTP1.1 相较于之前版本的改进',
+                            link: '/subject/computer/5'
                         }
                     ]
                 },
