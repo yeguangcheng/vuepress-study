@@ -48,6 +48,7 @@ module.exports = {
         navbar: [
             // 导航栏配置
             { text: 'Home', link: '/' },
+            { text: '学习路线', link: '/line' },
             { text: '技术文章', link: '/blog' },
             { text: '面试题汇总', link: '/subject/js/1' }
         ],
