@@ -28,6 +28,7 @@
 2. [前端模块化：CommonJS,AMD,CMD,ES6](https://juejin.cn/post/6844903576309858318)
 3. [了解 JS 的同步模式和异步模式](https://juejin.cn/post/6951302858013114375)
 4. [深入理解 JavaScript 回调函数](https://juejin.cn/post/6844903987771097102)
+5. [窥探原理：手写一个 JavaScript 打包器](https://juejin.cn/post/6844904032587382797)
 
 ##### 浏览器事件详解
 
@@ -56,3 +57,30 @@
 
 1. [JavaScript 设计模式 es6（23 种)](https://juejin.cn/post/6844904032826294286)
 2. [前端面试之 JavaScript 设计模式](https://juejin.cn/post/6844903861606416397)
+
+##### TypeScript
+
+1. [2022 typescript 史上最强学习入门文章(2w 字))](https://juejin.cn/post/7018805943710253086)
+2. [Typescript 中的 interface 和 type 到底有什么区别](https://juejin.cn/post/6844903749501059085)
+3. [TS 基础及面试题](https://blog.csdn.net/weixin_45719821/article/details/124865600)
+
+##### ES6
+
+1. [你会用 ES6，那倒是用啊！](https://juejin.cn/post/7016520448204603423)
+2. [ES6、ES7、ES8、ES9、ES10 新特性一览](https://juejin.cn/post/6844903811622912014)
+3. [JS 高级之手写一个 Promise,Generator,async 和 await【近 1W 字】](https://juejin.cn/post/6844904022223110151)
+4. [什么是 Promise.allSettled() ！新手老手都要会？](https://juejin.cn/post/7016856020395753509)
+5. [2022 年了你还不了解箭头函数与普通函数的区别吗？](https://juejin.cn/post/7069943937577779214)
+
+## Vue
+
+1. [手写 Vue-router 核心原理，再也不怕面试官问我 Vue-router 原理](https://juejin.cn/post/6854573222231605256)
+2. [快速上手 Vuex 到 手写简易 Vuex](https://juejin.cn/post/6994337441314242590)
+3. [【cli】这是看过最优秀的 Vue-cli 源码分析，绝对受益匪浅](https://juejin.cn/post/6844903586929868813)
+4. [推荐 7 个 Vue2、Vue3 源码解密分析的重磅开源项目](https://juejin.cn/post/6942492146725290020)
+5. [字节一面，面试官问我 Vue3 源码，我说……](https://juejin.cn/post/7070809037398343717)
+
+## 小程序
+
+1. [微信小程序架构原理基础解析](https://juejin.cn/post/6976805521407868958)
+2. [五年电商前端团队小程序开发经验总结（万字原理 + 优化干货）](https://juejin.cn/post/7100752247381819399)
